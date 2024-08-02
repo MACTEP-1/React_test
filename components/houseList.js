@@ -24,18 +24,18 @@ const HouseList = () => {
             const response = await fetch("/api/houses");
             const houses = await response.json();
             setHouses(houses);
-        }
+        } 
         fetchHouses();
-    });
+    }, []);
 
     const addHouse = () => {
         setHouses([
             ...houses,
             {
-                id: 3,
+                id: 9,
                 address: "345 Hello rd",
                 country: "Malaysia",
-                price: 422,
+                //price: 422,
             },
         ]);
     };
